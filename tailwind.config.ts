@@ -8,9 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      colors: {},
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+        "roboto-condensed": ["Roboto Condensed", "sans-serif"],
       },
     },
   },
