@@ -8,7 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        darkest: "#191917",
+        green: "#047433",
+        "lighter-green": "#79C551",
+        "lightest-green": "#9BEA9A",
+        red: "#CE1141",
+        orange: "#D95745",
+        tan: "#FBF9E7",
+        blue: "#00437C",
+        "lighter-blue": "#0062AB",
+        black: "#00112B"
+      },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
         "roboto-condensed": ["Roboto Condensed", "sans-serif"],
