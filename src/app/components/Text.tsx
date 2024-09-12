@@ -17,8 +17,8 @@ const variantClasses: { [key: string]: string } = {
     paragraphL: 'font-normal text-xl md:text-2xl text-darkest',
 };
 
-const Text: React.FC<TextProps> = ({ variant = 'body', children }) => {
-  const classes = variantClasses[variant] || variantClasses.body;
+const Text: React.FC<TextProps> = ({ variant = 'paragraph', children }) => {
+  const classes = variantClasses[variant] || variantClasses.paragraph;
   return <p className={classes}>{children}</p>;
 };
 
