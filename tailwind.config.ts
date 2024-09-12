@@ -25,6 +25,9 @@ const config: Config = {
         "roboto-condensed": ["Roboto Condensed", "sans-serif"],
       },
     },
+    borderWidth: {
+      DEFAULT: '1.5px',
+    },
   },
   plugins: [],
 };
