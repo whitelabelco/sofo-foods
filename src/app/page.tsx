@@ -1,3 +1,7 @@
+import Text from './components/Text';
+
 export default function Home() {
-  return <div className="text-3xl">Sofo Foods</div>;
+  return <div className="">
+    <Text variant="headline">Sofo Foods Home</Text>
+  </div>;
 }
