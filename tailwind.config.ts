@@ -26,7 +26,7 @@ const config: Config = {
       },
     },
     borderWidth: {
-      DEFAULT: '1.5px',
+      DEFAULT: '2px',
     },
   },
   plugins: [],
