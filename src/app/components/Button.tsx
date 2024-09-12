@@ -20,7 +20,7 @@ interface ButtonProps {
         redText: 'bg-white text-red',
         blackText: 'bg-white text-darkest',
         blueText: 'bg-white text-blue',
-        transparentBlack: 'bg-transparent text-darkest border border-darkest',
+        transparentBlack: `bg-transparent text-darkest border ${arrow ? `border-darkest` : `border-darkest/10`}`,
         transparentWhite: 'bg-transparent text-white border border-white',
     };
     const sizeStyles = {
@@ -44,11 +44,11 @@ interface ButtonProps {
         onClick={onClick}
       >
         {children}
-        {arrow && size === "sm" ?
+        {arrow && (size === "sm" ?
          <ArrowCroppedSvg className={`${svgStyles[variant]}`} /> 
          :
          <ArrowSvg className={`${svgStyles[variant]}`} />
-        }
+        )}
       </button>
     );
   };
