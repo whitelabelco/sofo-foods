@@ -5,6 +5,7 @@ interface LinkProps {
   variant?: 'base' | 'sidebar';
   children: React.ReactNode;
   href?: string;
+  onClick: () => void;
 }
 
 const variantClasses: { [key: string]: string } = {
@@ -12,9 +13,9 @@ const variantClasses: { [key: string]: string } = {
     sidebar: 'font-normal text-base md:text-lg pl-2 text-darkest/70 hover:ease-out hover:duration-150 hover:text-darkest hover:border-l hover:border-left-darkest/10 active:text-darkest active:border-l active:border-darkest',
 };
 
-const Link: React.FC<LinkProps> = ({ variant = 'base', children, href = "/" }) => {
+const Link: React.FC<LinkProps> = ({ variant = 'base', children, href = "/", onClick }) => {
   const classes = variantClasses[variant] || variantClasses.base;
-  return <NextLink href={href} className={classes}>{children}</NextLink>;
+  return <NextLink href={href} onClick={onClick} className={classes}>{children}</NextLink>;
 };
 
 export default Link;
