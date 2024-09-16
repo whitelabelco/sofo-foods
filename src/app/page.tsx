@@ -1,8 +1,9 @@
+"use client";
 
-import Text from './components/Text';
+import Link from "./components/Link";
 
 export default function Home() {
-  return <div className="">
-    <Text variant="headline">Sofo Foods Home</Text>
+  return <div className="flex items-center justify-center">
+    <Link onClick={() => console.log("clicked")} variant="sidebar">Link</Link>
   </div>;
 }
