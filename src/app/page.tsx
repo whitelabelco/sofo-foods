@@ -1,7 +1,7 @@
-import Tag from "./components/Tag";
+import LocationCard from "./components/LocationCard";
 
 export default function Home() {
   return <div className="flex justify-center items-center py-20">
-    <Tag>Tag content</Tag>
+    <LocationCard variant="georgia" />
   </div>;
 }
