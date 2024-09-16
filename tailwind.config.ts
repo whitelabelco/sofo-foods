@@ -30,7 +30,7 @@ const config: Config = {
       },
     },
     borderWidth: {
-      DEFAULT: '2px',
+      DEFAULT: '1px',
     },
   },
   plugins: [],
