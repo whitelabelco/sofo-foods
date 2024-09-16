@@ -25,6 +25,7 @@ const config: Config = {
         roboto: ["Roboto", "sans-serif"],
         "roboto-condensed": ["Roboto Condensed", "sans-serif"],
       },
+      display: ['group-hover'],
       fontSize: {
         '9xl': '148px',
       },
