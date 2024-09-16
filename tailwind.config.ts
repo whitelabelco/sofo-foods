@@ -28,6 +28,9 @@ const config: Config = {
         '9xl': '148px',
       },
     },
+    borderWidth: {
+      DEFAULT: '2px',
+    },
   },
   plugins: [],
 };
