@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "./components/Link";
+import Input from "./components/Input";
 
 export default function Home() {
-  return <div className="flex items-center justify-center">
-    <Link onClick={() => console.log("clicked")} variant="sidebar">Link</Link>
+  return <div className="flex justify-center items-center py-20">
+    <Input variant="emailList" placeholder="Enter your email" onChange={(e) => console.log(e.target.value)} value="" />
   </div>;
 }
