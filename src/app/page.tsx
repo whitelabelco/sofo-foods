@@ -1,9 +1,8 @@
-"use client";
 
-import Button from "./components/Button";
+import Text from './components/Text';
 
 export default function Home() {
   return <div className="">
-    <Button onClick={() => console.log("clicked")} variant="blue" size="sm" arrow>button text</Button>
+    <Text variant="headline">Sofo Foods Home</Text>
   </div>;
 }

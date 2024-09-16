@@ -24,6 +24,9 @@ const config: Config = {
         roboto: ["Roboto", "sans-serif"],
         "roboto-condensed": ["Roboto Condensed", "sans-serif"],
       },
+      fontSize: {
+        '9xl': '148px',
+      },
     },
     borderWidth: {
       DEFAULT: '2px',
