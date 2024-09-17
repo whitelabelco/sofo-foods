@@ -2,20 +2,44 @@
 import React from 'react';
 
 import Text from './Text';
-import Georgia from '/public/georgia.svg';
-import Kentucky from '/public/kentucky.svg';
-import Ohio from '/public/ohio.svg';
-import Texas from '/public/texas.svg';
+import Georgia from '/public/images/georgia.svg';
+import Kentucky from '/public/images/kentucky.svg';
+import Ohio from '/public/images/ohio.svg';
+import Texas from '/public/images/texas.svg';
 
 interface LocationCardProps {
   variant?: 'georgia' | 'kentucky' | 'ohio' | 'texas';
 }
 
 const variantContent = {
-    georgia: {icon: <Georgia />, title: 'Georgia', address: ["3910 Lakefield Dr.", <br />, "Suwanee, GA 30024"], phone: "1-800-969-0320", fax: "770-476-4767"},
-    kentucky: {icon: <Kentucky />, title: 'Kentucky', address: ["Street", <br />, "City, State Zip"], phone: "xxx-xxx-xxxx", fax: "xxx-xxx-xxxx"},
-    ohio: {icon: <Ohio />, title: 'Ohio', address: ["​​253 Waggoner Blvd.", <br />, "Toledo, OH 43612"], phone: "1-800-447-4211", fax: "419-478-6104"},
-    texas: {icon: <Texas />, title: 'Texas', address: ["11502 S Main St #230", <br />, "Houston, TX 77025"], phone: "1-800-969-0320", fax: "713-663-7768"},
+    georgia: {
+      icon: <Georgia />,
+      title: 'Georgia',
+      address: ["3910 Lakefield Dr.", <br />, "Suwanee, GA 30024"],
+      phone: "1-800-969-0320",
+      fax: "770-476-4767"
+    },
+    kentucky: {
+      icon: <Kentucky />,
+      title: 'Kentucky',
+      address: ["Street", <br />, "City, State Zip"],
+      phone: "xxx-xxx-xxxx",
+      fax: "xxx-xxx-xxxx"
+    },
+    ohio: {
+      icon: <Ohio />,
+      title: 'Ohio',
+      address: ["​​253 Waggoner Blvd.", <br />, "Toledo, OH 43612"],
+      phone: "1-800-447-4211",
+      fax: "419-478-6104"
+    },
+    texas: {
+      icon: <Texas />,
+      title: 'Texas',
+      address: ["11502 S Main St #230", <br />, "Houston, TX 77025"],
+      phone: "1-800-969-0320",
+      fax: "713-663-7768"
+    }
 };
 
 const LocationCard: React.FC<LocationCardProps> = ({ variant = 'ohio' }) => {
