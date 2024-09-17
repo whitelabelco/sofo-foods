@@ -1,3 +1,4 @@
+
 import LocationCard from "./components/LocationCard";
 
 export default function Home() {
