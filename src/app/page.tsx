@@ -1,9 +1,10 @@
 "use client";
 
-import FooterLink from "./components/FooterLink";
+import FormField from "./components/FormField";
+
 
 export default function Home() {
-  return <div className="flex justify-center items-center py-20 bg-black">
-    <FooterLink href="/" onClick={() => console.log("clicked")} arrow>Footer</FooterLink>
+  return <div className="flex justify-center items-center py-20">
+    <FormField placeholder="Form Field" onChange={(e) => console.log(e.target.value)} value="" />
   </div>;
 }
