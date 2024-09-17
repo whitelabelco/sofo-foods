@@ -18,7 +18,8 @@ const config: Config = {
         tan: "#FBF9E7",
         blue: "#00437C",
         "lighter-blue": "#0062AB",
-        black: "#00112B"
+        black: "#00112B",
+        "location-bg": "#E1F8FF99"
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
