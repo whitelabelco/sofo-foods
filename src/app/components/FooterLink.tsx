@@ -1,7 +1,7 @@
 import React from 'react';
 import NextLink from 'next/link';
 
-import ArrowSvg from '/public/images/arrow-diagonal.svg';
+import ArrowSvg from '/public/icons/arrow-diagonal.svg';
 
 interface FooterLinkProps {
   children: React.ReactNode;
