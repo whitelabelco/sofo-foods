@@ -10,7 +10,7 @@ interface LinkProps {
 
 const variantClasses: { [key: string]: string } = {
     base: 'font-roboto-condensed font-medium text-base text-darkest/70 hover:text-darkest uppercase',
-    sidebar: 'font-normal text-base md:text-lg pl-2 text-darkest/70 hover:ease-out hover:duration-150 hover:text-darkest hover:border-l hover:border-left-darkest/10 active:text-darkest active:border-l active:border-darkest',
+    sidebar: 'font-normal text-base md:text-lg pl-2 text-darkest/70 group-hover:ease-out group-hover:duration-150 group-hover:text-darkest group-hover:border-l group-hover:border-left-darkest/10 active:text-darkest active:border-l active:border-darkest',
 };
 
 const Link: React.FC<LinkProps> = ({ variant = 'base', children, href = "/", onClick }) => {

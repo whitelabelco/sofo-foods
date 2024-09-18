@@ -6,7 +6,7 @@ interface TextProps {
 }
 
 const variantClasses: { [key: string]: string } = {
-    mainNav: 'font-roboto-condensed font-medium text-base text-darkest',
+    mainNav: 'font-roboto-condensed font-medium text-base text-darkest uppercase',
     headline: 'font-semibold text-2xl md:text-4xl text-darkest tracking-wider',
     headlineSm: 'font-roboto-condensed font medium text-base md:text-2xl text-darkest',
     headlineXl: 'font-normal text-3xl md:text-5xl text-darkest',
