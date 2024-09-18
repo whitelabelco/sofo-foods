@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ArrowSvg from '/public/images/arrow-right.svg';
-import ArrowCroppedSvg from '/public/images/arrow-right-cropped.svg';
+import ArrowSvg from '/public/icons/arrow-right.svg';
+import ArrowCroppedSvg from '/public/icons/arrow-right-cropped.svg';
 
 interface ButtonProps {
     variant?: 'red' | 'blue' | 'green' | 'redText' | 'blackText' | 'blueText' | 'transparentBlack' | 'transparentWhite';

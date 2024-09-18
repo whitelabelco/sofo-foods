@@ -2,10 +2,10 @@
 import React from 'react';
 
 import Text from './Text';
-import Georgia from '/public/images/georgia.svg';
-import Kentucky from '/public/images/kentucky.svg';
-import Ohio from '/public/images/ohio.svg';
-import Texas from '/public/images/texas.svg';
+import Georgia from '/public/icons/georgia.svg';
+import Kentucky from '/public/icons/kentucky.svg';
+import Ohio from '/public/icons/ohio.svg';
+import Texas from '/public/icons/texas.svg';
 
 interface LocationCardProps {
   variant?: 'georgia' | 'kentucky' | 'ohio' | 'texas';

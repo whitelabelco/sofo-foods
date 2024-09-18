@@ -29,6 +29,9 @@ const config: Config = {
       fontSize: {
         '9xl': '148px',
       },
+      backgroundImage: {
+        'contact-callout': "url('/images/contact-callout.jpeg')",
+      }
     },
     borderWidth: {
       DEFAULT: '1px',
