@@ -1,3 +1,4 @@
+import Testimonial from "./components/Testimonial";
 
 import Button from "./components/Button";
 
