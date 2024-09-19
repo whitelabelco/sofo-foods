@@ -1,8 +1,8 @@
-import CareersCallout from "./components/CareersCallout";
+import Testimonial from "./components/Testimonial";
 
 
 export default function Home() {
-  return <div className="flex justify-center items-center py-20">
-    <CareersCallout />
+  return <div className="">
+    <Testimonial />
   </div>;
 }
