@@ -36,6 +36,10 @@ interface ButtonProps {
           transparentBlack: 'stroke-darkest',
           transparentWhite: 'stroke-white',
     };
+
+    const commonStyles = {
+      btnArrow: 'relative -left-2 transform group-hover:translate-x-5 transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100'
+    }
   
     return (
       <button
@@ -46,9 +50,9 @@ interface ButtonProps {
           {children}
           <span>
             {size === "sm" ?
-              <ArrowCroppedSvg className={`relative -left-2 transform group-hover:translate-x-5 transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 ${svgStyles[variant]}`} /> 
+              <ArrowCroppedSvg className={`${commonStyles.btnArrow} ${svgStyles[variant]}`} /> 
               :
-              <ArrowSvg className={`relative -left-2 transform group-hover:translate-x-5 transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 ${svgStyles[variant]}`} /> 
+              <ArrowSvg className={`${commonStyles.btnArrow} ${svgStyles[variant]}`} /> 
             }
           </span>
         </span>
