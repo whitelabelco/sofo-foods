@@ -31,6 +31,7 @@ const config: Config = {
       },
       backgroundImage: {
         'contact-callout': "url('/images/contact-callout.jpeg')",
+        'careers-callout': "url('/images/careers-callout.webp')",
       }
     },
     borderWidth: {
