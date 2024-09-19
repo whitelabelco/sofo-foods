@@ -6,13 +6,12 @@ import ArrowCroppedSvg from '/public/icons/arrow-right-cropped.svg';
 interface ButtonProps {
     variant?: 'red' | 'blue' | 'green' | 'redText' | 'blackText' | 'blueText' | 'transparentBlack' | 'transparentWhite';
     size?: 'sm' | 'base';
-    arrow?: boolean;
     children: React.ReactNode;
     onClick?: () => void;
   }
 
-  const Button: React.FC<ButtonProps> = ({ variant = 'red', size = 'base', arrow = false, children, onClick }) => {
-    const baseStyles = 'flex items-center justify-center whitespace-nowrap gap-2 rounded-lg font-roboto-condensed text-base font-base uppercase ';
+  const Button: React.FC<ButtonProps> = ({ variant = 'red', size = 'base', children, onClick }) => {
+    const baseStyles = 'group relative flex items-center justify-center whitespace-nowrap gap-2 rounded-lg font-roboto-condensed text-base font-base uppercase overflow-hidden';
     const variantStyles = {
       red: 'bg-red text-white',
       blue: 'bg-gradient-to-r from-lighter-blue to-blue text-white',
@@ -20,7 +19,7 @@ interface ButtonProps {
         redText: 'bg-white text-red',
         blackText: 'bg-white text-darkest',
         blueText: 'bg-white text-blue',
-        transparentBlack: `bg-transparent text-darkest border ${arrow ? `border-darkest` : `border-darkest/10`}`,
+        transparentBlack: `bg-transparent text-darkest border hover:border-darkest border-darkest/10`,
         transparentWhite: 'bg-transparent text-white border border-white',
     };
     const sizeStyles = {
@@ -43,12 +42,16 @@ interface ButtonProps {
         className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]}`}
         onClick={onClick}
       >
-        {children}
-        {arrow && (size === "sm" ?
-         <ArrowCroppedSvg className={`${svgStyles[variant]}`} /> 
-         :
-         <ArrowSvg className={`${svgStyles[variant]}`} />
-        )}
+        <span className="flex flex-row relative left-2 items-center justify-center z-10 group-hover:-translate-x-4 transition-transform duration-300 ease-in-out">
+          {children}
+          <span>
+            {size === "sm" ?
+              <ArrowCroppedSvg className={`relative -left-2 transform group-hover:translate-x-5 transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 ${svgStyles[variant]}`} /> 
+              :
+              <ArrowSvg className={`relative -left-2 transform group-hover:translate-x-5 transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 ${svgStyles[variant]}`} /> 
+            }
+          </span>
+        </span>
       </button>
     );
   };
