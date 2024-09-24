@@ -4,7 +4,7 @@ import ArrowSvg from '/public/icons/arrow-right.svg';
 import ArrowCroppedSvg from '/public/icons/arrow-right-cropped.svg';
 
 interface ButtonProps {
-    variant?: 'red' | 'blue' | 'green' | 'redText' | 'blackText' | 'blueText' | 'transparentBlack' | 'transparentWhite';
+    variant?: 'red' | 'blue' | 'green' | 'redText' | 'blackText' | 'blueText' | 'transparentBlack' | 'transparentWhite' | 'product';
     size?: 'sm' | 'base';
     children: React.ReactNode;
     onClick?: () => void;
@@ -21,11 +21,14 @@ interface ButtonProps {
         blueText: 'bg-white text-blue',
         transparentBlack: `bg-transparent text-darkest border hover:border-darkest border-darkest/10`,
         transparentWhite: 'bg-transparent text-white border border-white',
+        product: 'bg-transparent text-white border-none',
     };
+
     const sizeStyles = {
       sm: 'px-6 py-2',
       base: 'px-8 py-3.5',
     };
+
     const svgStyles = {
         red: 'stroke-white',
         blue: 'stroke-white',
@@ -35,6 +38,7 @@ interface ButtonProps {
           blueText: 'stroke-blue',
           transparentBlack: 'stroke-darkest',
           transparentWhite: 'stroke-white',
+          product: 'stroke-white'
     };
 
     const commonStyles = {
