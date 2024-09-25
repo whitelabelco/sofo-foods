@@ -72,7 +72,7 @@ const Header = () => {
         <div className="h-8 bg-red flex flex-row self-stretch items-center justify-end pr-14">
             <Link href="/" className="text-white underline text-xs">Customer Login</Link>
         </div>
-            <nav className="flex flex-row w-full justify-between items-center">
+            <nav className="flex flex-row w-full justify-between items-center max-w-screen-2xl">
                     <ul className="flex flex-row items-center justify-between w-1/3 px-6 py-6">
                         {navLinks.map((link, index) => (
                             index <= 2 && (
