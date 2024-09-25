@@ -1,8 +1,11 @@
 
-import ProductCard from "./components/ProductCard";
+import Header from "./components/Header";
 
 export default function Home() {
-  return <div className="flex justify-center items-center py-20">
-    <ProductCard />
-  </div>;
+  return (
+    <div>
+      <Header />
+        <div className="flex items-center justify-center text-3xl py-20">Home Page</div>
+    </div>
+  );
 }
