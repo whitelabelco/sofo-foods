@@ -1,3 +1,10 @@
+import Header from "../components/Header";
+
 export default function Contact() {
-    return <div className="text-3xl">Contact</div>;
+    return (
+      <div>
+        <Header />
+          <div className="flex items-center justify-center text-3xl py-20">Contact Page</div>
+      </div>
+    );
   }
