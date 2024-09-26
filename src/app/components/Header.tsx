@@ -14,11 +14,11 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navLinks = [
-        <Link key={0} href="/about">About Us</Link>,
-        <Link key={1} href="/brands">Brands</Link>,
-        <Link key={2} href="/products">Products</Link>,
-        <Link key={3} href="/careers">Careers</Link>,
-        <Link key={4} href="/order">Order Now</Link>
+        <Link key={0} href="/about" animate>About Us</Link>,
+        <Link key={1} href="/brands" animate>Brands</Link>,
+        <Link key={2} href="/products" animate>Products</Link>,
+        <Link key={3} href="/careers" animate>Careers</Link>,
+        <Link key={4} href="/order" animate>Order Now</Link>
     ]
 
     const headerLogo = {
