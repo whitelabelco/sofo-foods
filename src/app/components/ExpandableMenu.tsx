@@ -53,7 +53,7 @@ const ExpandableMenu = () => {
             <ol id="content" className="max-h-0 overflow-scroll transition-all duration-300 ease-in-out mt-2">
                 {menuContent.map((item, index) => (
                     <li key={index} className="group cursor-pointer mt-2">
-                        <Link onClick={() => console.log("clicked")} variant="sidebar">
+                        <Link variant="sidebar">
                             {item}
                         </Link>
                     </li>
