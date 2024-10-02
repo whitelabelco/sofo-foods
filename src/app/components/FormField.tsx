@@ -10,8 +10,8 @@ interface FormFieldProps {
   required?: boolean;
   buttonText: string;
   onClick: () => void;
-  buttonVariant: string;
-  inputVariant: string;
+  buttonVariant: "red" | "blue" | "green" | "redText" | "blackText" | "blueText" | "transparentBlack" | "transparentWhite" | "product";
+  inputVariant?: "base" | "dark";
 }
 
 const FormField: React.FC<FormFieldProps> = ({ placeholder, onChange, value, disabled, required, buttonText, onClick, buttonVariant, inputVariant }) => {
