@@ -36,13 +36,17 @@ const Header = () => {
                 <div>
                     {headerLogo.mobile}
                 </div>
-                <div className="space-y-2" onClick={() => setIsOpen((prev) => !prev)}>
-                    <MenuSvg />
-                </div>
-                <div className={isOpen ? "absolute flex flex-col justify-between items-center w-full h-screen top-2 left-0 bg-white z-10 transition-all duration-200 ease-in-out" : "hidden"}>
-                <div className="absolute top-0 right-0 px-4 py-4" onClick={() => setIsOpen(false)}>
-                    <CloseSvg />
-                </div>
+                { !isOpen ? (
+                    <div className="space-y-2" onClick={() => setIsOpen((prev) => !prev)}>
+                        <MenuSvg />
+                    </div>
+                ) : (
+                    <div className="space-y-2" onClick={() => setIsOpen(false)}>
+                        <CloseSvg />
+                    </div>
+                ) }
+                <div className={isOpen ? "absolute flex flex-col justify-between items-center w-full h-[30vh] top-20 left-0 bg-white z-10 transition-all duration-200 ease-in-out" : "hidden"}>
+
                     <ul className="flex flex-col items-center justify-between min-h-[400px] py-12">
                         {navLinks.map((link, index) => (
                             <li key={index}>{link}</li>
