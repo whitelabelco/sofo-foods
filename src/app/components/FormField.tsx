@@ -1,6 +1,6 @@
 import React from 'react';
 import Input from './Input';
-import Text from './Text';
+import Button from './Button';
 
 interface FormFieldProps {
   placeholder: string;
@@ -8,13 +8,17 @@ interface FormFieldProps {
   value: string;
   disabled?: boolean;
   required?: boolean;
+  buttonText: string;
+  onClick: () => void;
+  buttonVariant: "red" | "blue" | "green" | "redText" | "blackText" | "blueText" | "transparentBlack" | "transparentWhite" | "product";
+  inputVariant?: "base" | "dark";
 }
 
-const FormField: React.FC<FormFieldProps> = ({ placeholder, onChange, value, disabled, required }) => {
+const FormField: React.FC<FormFieldProps> = ({ placeholder, onChange, value, disabled, required, buttonText, onClick, buttonVariant, inputVariant }) => {
   return (
-    <div className="flex flex-col h-[70px] w-[216px] gap-3">
-        <Text variant="formLabel">{placeholder}</Text>
-        <Input placeholder={placeholder} onChange={onChange} value={value} disabled={disabled} required={required} variant="base" />
+    <div className="flex flex-row justify-center items-center gap-3">
+        <Input placeholder={placeholder} onChange={onChange} value={value} disabled={disabled} required={required} variant={inputVariant} />
+        <Button onClick={onClick} variant={buttonVariant} size="sm">{buttonText}</Button>
     </div>
   );
 };

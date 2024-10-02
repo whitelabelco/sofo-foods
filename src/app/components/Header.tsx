@@ -36,13 +36,17 @@ const Header = () => {
                 <div>
                     {headerLogo.mobile}
                 </div>
-                <div className="space-y-2" onClick={() => setIsOpen((prev) => !prev)}>
-                    <MenuSvg />
-                </div>
-                <div className={isOpen ? "absolute flex flex-col justify-between items-center w-full h-screen top-2 left-0 bg-white z-10 transition-all duration-200 ease-in-out" : "hidden"}>
-                <div className="absolute top-0 right-0 px-4 py-4" onClick={() => setIsOpen(false)}>
-                    <CloseSvg />
-                </div>
+                { !isOpen ? (
+                    <div className="space-y-2" onClick={() => setIsOpen((prev) => !prev)}>
+                        <MenuSvg />
+                    </div>
+                ) : (
+                    <div className="space-y-2" onClick={() => setIsOpen(false)}>
+                        <CloseSvg />
+                    </div>
+                ) }
+                <div className={isOpen ? "absolute flex flex-col justify-between items-center w-full h-[30vh] top-20 left-0 bg-white z-10 transition-all duration-200 ease-in-out" : "hidden"}>
+
                     <ul className="flex flex-col items-center justify-between min-h-[400px] py-12">
                         {navLinks.map((link, index) => (
                             <li key={index}>{link}</li>
@@ -70,7 +74,7 @@ const Header = () => {
         {/* xl */}
         <div className="hidden xl:flex flex-col items-center bg-white border-b border-darkest/10 drop-shadow-sm">
         <div className="h-8 bg-red flex flex-row self-stretch items-center justify-end pr-14">
-            <Link href="/" className="text-white underline text-xs">Customer Login</Link>
+            <Link href="https://order.sofofoods.com/" className="text-white underline text-xs" external>Customer Login</Link>
         </div>
             <nav className="flex flex-row w-full justify-between items-center max-w-screen-2xl">
                     <ul className="flex flex-row items-center justify-between w-1/3 px-6 py-6">
