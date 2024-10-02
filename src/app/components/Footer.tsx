@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 import Link from './FooterLink';
@@ -8,6 +8,11 @@ import Text from './Text';
 import FormField from './FormField';
 
 const Footer = () => {
+    const [value, setValue] = useState("");
+
+    const handleChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+      setValue(event.target.value)
+    }
 
     const company = (
         <Text variant="mainNav" className="text-white uppercase pt-8">Company</Text>
@@ -44,7 +49,7 @@ const Footer = () => {
             <Text variant="mainNav" className="text-white uppercase pt-4 md:pt-0 xl:pt-4">Subscribe to our newsletter</Text>
             <Text variant="paragraph" className="text-white/70">The latest news, articles, and resources, sent to your inbox weekly.</Text>
                 <div className="flex justify-start">
-                    <FormField placeholder="Enter your email" onChange={(e) => console.log(e.target.value)}  value="" onClick={() => console.log("clicked")} buttonText="Subscribe" buttonVariant="transparentWhite" inputVariant="dark"/>
+                    <FormField placeholder="Enter your email" onChange={handleChange}  value={value} onClick={() => console.log("clicked")} buttonText="Subscribe" buttonVariant="transparentWhite" inputVariant="dark"/>
                 </div>
         </>
     )
