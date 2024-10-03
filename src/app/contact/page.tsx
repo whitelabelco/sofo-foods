@@ -5,7 +5,7 @@ export default function Contact() {
     return (
       <div>
         <Header />
-          <div className="flex items-center justify-center text-3xl py-20">Contact Page</div>
+          <div className="flex items-center justify-center text-3xl py-20 h-screen">Contact Page</div>
         <Footer />
       </div>
     );
