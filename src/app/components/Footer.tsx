@@ -15,7 +15,7 @@ const Footer = () => {
     }
 
     const company = (
-        <Text variant="mainNav" className="text-white uppercase pt-8">Company</Text>
+        <Text variant="mainNav" className="text-white uppercase pt-8 md:pt-4">Company</Text>
     )
 
     const companyLinks = [
