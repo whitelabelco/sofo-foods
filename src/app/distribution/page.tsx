@@ -5,7 +5,7 @@ export default function Distribution() {
     return (
       <div>
       <Header />
-        <div className="flex items-center justify-center text-3xl py-20">Distribution Page</div>
+        <div className="flex items-center justify-center text-3xl py-20 h-screen">Distribution Page</div>
       <Footer />
     </div>
     );
