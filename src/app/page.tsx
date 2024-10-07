@@ -3,6 +3,7 @@
 import React from "react";
 import { useRouter } from 'next/navigation'
 
+import BrandsCallout from "./components/BrandsCallout";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Button from "./components/Button";
@@ -75,6 +76,7 @@ export default function Home() {
       <Header />
         {hero}
         {welcome}
+        <BrandsCallout />
         <div className="flex items-center justify-center text-3xl my-32">next section...</div>
       <Footer />
     </div>
