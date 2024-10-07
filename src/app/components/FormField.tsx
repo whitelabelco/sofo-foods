@@ -18,7 +18,7 @@ const FormField: React.FC<FormFieldProps> = ({ placeholder, onChange, value, dis
   return (
     <div className="flex flex-row justify-center items-center gap-3">
         <Input placeholder={placeholder} onChange={onChange} value={value} disabled={disabled} required={required} variant={inputVariant} />
-        <Button onClick={onClick} variant={buttonVariant} size="sm">{buttonText}</Button>
+        <Button onClick={onClick} variant={buttonVariant}>{buttonText}</Button>
     </div>
   );
 };

@@ -5,7 +5,7 @@ export default function Order() {
     return (
       <div>
       <Header />
-        <div className="flex items-center justify-center text-3xl py-20">Order Page</div>
+        <div className="flex items-center justify-center text-3xl py-20 h-screen">Order Page</div>
       <Footer />
     </div>
     );

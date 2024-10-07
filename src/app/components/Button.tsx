@@ -1,17 +1,15 @@
 import React from 'react';
 
 import ArrowSvg from '/public/icons/arrow-right.svg';
-import ArrowCroppedSvg from '/public/icons/arrow-right-cropped.svg';
 
 interface ButtonProps {
     variant?: 'red' | 'blue' | 'green' | 'redText' | 'blackText' | 'blueText' | 'transparentBlack' | 'transparentWhite' | 'product';
-    size?: 'sm' | 'base';
     children: React.ReactNode;
     onClick?: () => void;
   }
 
-  const Button: React.FC<ButtonProps> = ({ variant = 'red', size = 'base', children, onClick }) => {
-    const baseStyles = 'group relative flex items-center justify-center whitespace-nowrap gap-2 rounded-lg font-roboto-condensed text-base font-base uppercase overflow-hidden';
+  const Button: React.FC<ButtonProps> = ({ variant = 'red', children, onClick }) => {
+    const baseStyles = 'group relative flex items-center justify-center whitespace-nowrap gap-2 rounded-lg font-roboto-condensed text-base font-base uppercase overflow-hidden px-6 py-2 md:px-8 md:py-3.5';
     const variantStyles = {
       red: 'bg-red text-white',
       blue: 'bg-gradient-to-r from-lighter-blue to-blue text-white',
@@ -22,11 +20,6 @@ interface ButtonProps {
         transparentBlack: `bg-transparent text-darkest border hover:border-darkest border-darkest/10`,
         transparentWhite: 'bg-transparent text-white border border-white',
         product: 'bg-transparent text-white border-none',
-    };
-
-    const sizeStyles = {
-      sm: 'px-6 py-2',
-      base: 'px-8 py-3.5',
     };
 
     const svgStyles = {
@@ -47,17 +40,13 @@ interface ButtonProps {
   
     return (
       <button
-        className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]}`}
+        className={`${baseStyles} ${variantStyles[variant]}`}
         onClick={onClick}
       >
         <span className="flex flex-row relative left-2 items-center justify-center z-10 group-hover:-translate-x-4 transition-transform duration-300 ease-in-out">
           {children}
           <span>
-            {size === "sm" ?
-              <ArrowCroppedSvg className={`${commonStyles.btnArrow} ${svgStyles[variant]}`} /> 
-              :
               <ArrowSvg className={`${commonStyles.btnArrow} ${svgStyles[variant]}`} /> 
-            }
           </span>
         </span>
       </button>
