@@ -5,7 +5,7 @@ export default function Brands() {
     return (
       <div>
       <Header />
-        <div className="flex items-center justify-center text-3xl py-20">Brands Page</div>
+        <div className="flex items-center justify-center text-3xl py-20 h-screen">Brands Page</div>
       <Footer />
     </div>
     );

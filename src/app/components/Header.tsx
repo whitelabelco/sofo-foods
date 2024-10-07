@@ -28,9 +28,8 @@ const Header = () => {
 
   return (
     <>
-        <div className="xl:hidden flex flex-col items-center bg-white border-b border-darkest/10 drop-shadow-sm gap-4">
+        <div className="xl:hidden flex flex-col items-center bg-white border-b border-darkest/10 drop-shadow-sm gap-4 relative z-30">
         <div className="xl:hidden h-2 bg-red flex-none order-0 self-stretch"></div>
-
             {/* sm */}
             <nav className="md:hidden flex flex-row w-full justify-between items-center px-2">
                 <div>
@@ -45,8 +44,7 @@ const Header = () => {
                         <CloseSvg />
                     </div>
                 ) }
-                <div className={isOpen ? "absolute flex flex-col justify-between items-center w-full h-[30vh] top-20 left-0 bg-white z-10 transition-all duration-200 ease-in-out" : "hidden"}>
-
+                <div className={isOpen ? "absolute flex flex-col justify-between items-center w-full h-content top-16 left-0 bg-white/95 z-50 transition-all duration-200 ease-in-out" : "hidden"}>
                     <ul className="flex flex-col items-center justify-between min-h-[400px] py-12">
                         {navLinks.map((link, index) => (
                             <li key={index}>{link}</li>
@@ -65,7 +63,7 @@ const Header = () => {
                             <li key={index}>{link}</li>
                         ))}
                         <li>
-                            <Button onClick={() => router.push('/contact')} variant="blue" size="sm">Get in touch</Button>
+                            <Button onClick={() => router.push('/contact')} variant="blue">Get in touch</Button>
                         </li>
                     </ul>
             </nav>
@@ -94,7 +92,7 @@ const Header = () => {
                             )
                         ))}
                         <li>
-                            <Button onClick={() => router.push('/contact')} variant="blue" size="base">Become a customer</Button>
+                            <Button onClick={() => router.push('/contact')} variant="blue">Become a customer</Button>
                         </li>
                     </ul>
             </nav>
