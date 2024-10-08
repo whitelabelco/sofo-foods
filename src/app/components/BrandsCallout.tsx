@@ -24,23 +24,23 @@ const BrandsCallout = () => {
     ]
 
     return (
-        <section className="flex flex-col gap-12 justify-center items-center h-[564px] md:h-[622px] overflow-hidden">
-            <div className="flex flex-col justify-center items-center gap-8">
-                <div className="flex flex-col justify-center items-center text-center gap-4 w-[342px] md:w-[674px]">
+        <section className="flex flex-col gap-12 justify-center items-center h-[564px] md:h-[622px] mt-4 md:mt-0 overflow-hidden">
+            <div className="flex flex-col w-[342px] md:w-[674px] justify-center items-center gap-8">
+                <div className="flex flex-col justify-center items-center text-center gap-4">
                 <Text variant="headlineXl">Brands</Text>
                 <Text variant="paragraph" className="text-darkest/70">{brandsParagraph}</Text>
                 </div>
-                <div className="flex flex-row justify-center items-center gap-6">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                 <span className="inline-flex">
                     <Button onClick={() => router.push('/brands')} variant="red">More about brands</Button>
                 </span>
-                <span className="hidden md:inline-flex">
+                <span className="inline-flex">
                     <Button onClick={() => router.push('/order')} variant="transparentBlack">Start your first order</Button>
                 </span>
                 </div>
             </div>
 
-            <div className="flex flex-row w-full">
+            <div className="flex flex-row w-full max-w-screen-2xl">
                 <div className="grid grid-cols-7 gap-44 md:gap-24">
                     {featuredBrands.map((brand, index) => (
                         <div key={index} className="flex justify-center items-center">
