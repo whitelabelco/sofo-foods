@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Button from "./components/Button";
 import Text from "./components/Text";
+import Testimonial from "./components/Testimonial";
 
 export default function Home() {
   const router = useRouter()
@@ -77,6 +78,7 @@ export default function Home() {
         {hero}
         {welcome}
         <BrandsCallout />
+        <Testimonial />
         <div className="flex items-center justify-center text-3xl my-32">next section...</div>
       <Footer />
     </div>
