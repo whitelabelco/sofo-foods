@@ -2,23 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 import Text from './Text';
 
-const Testimonial = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+interface TestimonialProps {
+    testimonials: { quote: string; title: string }[];
+  }
 
-    const testimonials = [
-        {
-          quote: `"I have been a customer of Sofo Foods for over 60 years, and they have provided me with great service in addition to helping my business be a success. I feel like family with Sofo Foods!"`,
-          title: "Frank Incorvaia Sr. Owner | Inky's Italian Foods"
-        },
-        {
-            quote: `"We have been a customer of Sofo Foods for many years. The pride and dedication that Sofo Foods has for my business truly shines through its sales representatives."`,
-            title: "Kim Morrison Moran, Owner | Sal's Italian Restaurant"
-          },
-          {
-            quote: `"Mancino's Pizza & Grinders "Sofo Foods has been our main food supplier since we opened in 1997 and we feel our success is significantly influenced by our service and product from them."`,
-            title: "Wayne and Sandy Braun, Owners | Mancino's Pizza and Grinders of Alma, Michigan"
-          },
-    ];
+  const Testimonial: React.FC<TestimonialProps> = ({ testimonials }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
