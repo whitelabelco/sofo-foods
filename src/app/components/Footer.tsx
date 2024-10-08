@@ -71,9 +71,9 @@ const Footer = () => {
 
   return (
     <>
-        <footer className="xl:hidden flex flex-col items-center bg-darkest gap-4 inset-x-0 bottom-0 mt-auto max-w-screen">
+        <footer className="xl:hidden flex flex-col items-center bg-darkest gap-4 inset-x-0 bottom-0 mt-auto max-w-screen overflow-hidden">
             {/* sm */}
-            <div className="md:hidden flex flex-col max-w-screen mx-8 my-8">
+            <div className="md:hidden flex flex-col mx-8 my-8 w-[358px]">
                 {footerLogo.mobile}
                 <div className="flex flex-row">
                     <ul className="flex flex-col justify-between gap-4">
