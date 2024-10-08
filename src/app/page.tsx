@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Button from "./components/Button";
 import Text from "./components/Text";
+import ProductsCallout from "./components/ProductsCallout";
+import ProductCard from "./components/ProductCard";
 
 export default function Home() {
   const router = useRouter()
@@ -47,7 +49,7 @@ export default function Home() {
               As a family-operated business, our dedication to exceptional quality and service is unmatched in the industry.`
   
   const welcome = (
-    <section className="flex justify-center items-center bg-tan h-[467px] md:h-[603px] overflow-hidden">
+    <section className="flex justify-center items-center bg-tan h-[500px] md:h-[603px] overflow-hidden">
       <div className="flex flex-col w-[342px] md:w-[764px] justify-center items-center gap-8">
         <div className="flex flex-col justify-center items-center text-center gap-8">
           <Text variant="paragraphSans" className="text-red uppercase font-bold">Welcome</Text>
@@ -71,12 +73,36 @@ export default function Home() {
     </section>
   )
 
+  const productsImages = [
+      {img: "product-placeholder", name: "bread"},
+      {img: "product-placeholder", name: "cheese"},
+      {img: "product-placeholder", name: "meat"},
+      {img: "product-placeholder", name: "dairy"},
+      {img: "product-placeholder", name: "produce"},
+      {img: "product-placeholder", name: "deli"},
+  ]
+
+  const products = (
+    <div className="flex flex-col items-center justify-center my-8">
+      <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 md:gap-4 max-w-screen-xl">
+          {productsImages.map((product, index) => (
+              <div key={index} className="flex justify-center items-center">
+                  {/* <Image className="max-w-none rounded-lg" src={product} alt="Product" width={172} height={172} /> */}
+                  <ProductCard img={product.img} name={product.name}/>
+              </div>
+          ))}
+      </div>
+  </div>
+  )
+
   return (
     <div>
       <Header />
         {hero}
         {welcome}
-        <BrandsCallout />
+          <BrandsCallout />
+          <ProductsCallout />
+          {products}
         <div className="flex items-center justify-center text-3xl my-32">next section...</div>
       <Footer />
     </div>
