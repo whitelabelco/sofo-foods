@@ -91,6 +91,10 @@ export default function Home() {
               </div>
           ))}
       </div>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-12 my-16">
+          <Text variant="paragraphL" className="text-darkest/70"> Check out our full product listing</Text>
+          <Button onClick={() => router.push('/products')} variant="transparentBlack">all products</Button>
+      </div>
   </div>
   )
 
