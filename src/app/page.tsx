@@ -10,6 +10,7 @@ import Button from "./components/Button";
 import Text from "./components/Text";
 import ProductsCallout from "./components/ProductsCallout";
 import ProductCard from "./components/ProductCard";
+import ContactCallout from "./components/ContactCallout";
 
 export default function Home() {
   const router = useRouter()
@@ -106,7 +107,7 @@ export default function Home() {
           <BrandsCallout />
           <ProductsCallout />
           {products}
-        <div className="flex items-center justify-center text-3xl my-32">next section...</div>
+        <ContactCallout />
       <Footer />
     </div>
   );
