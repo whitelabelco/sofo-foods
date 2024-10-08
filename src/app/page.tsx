@@ -73,22 +73,21 @@ export default function Home() {
     </section>
   )
 
-  const productsImages = [
-      {img: "product-placeholder", name: "bread"},
-      {img: "product-placeholder", name: "cheese"},
-      {img: "product-placeholder", name: "meat"},
-      {img: "product-placeholder", name: "dairy"},
-      {img: "product-placeholder", name: "produce"},
-      {img: "product-placeholder", name: "deli"},
+  const productsNames = [
+      "bread",
+      "cheese",
+      "meat",
+      "dairy",
+      "produce",
+      "deli"
   ]
 
   const products = (
     <div className="flex flex-col items-center justify-center my-8">
       <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 md:gap-4 max-w-screen-xl">
-          {productsImages.map((product, index) => (
+          {productsNames.map((name, index) => (
               <div key={index} className="flex justify-center items-center">
-                  {/* <Image className="max-w-none rounded-lg" src={product} alt="Product" width={172} height={172} /> */}
-                  <ProductCard img={product.img} name={product.name}/>
+                  <ProductCard name={name}/>
               </div>
           ))}
       </div>
