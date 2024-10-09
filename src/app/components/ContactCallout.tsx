@@ -1,11 +1,14 @@
 "use client";
 
 import React from 'react';
+import { useRouter } from 'next/navigation'
 
 import Text from './Text';
 import Button from './Button';
 
 const ContactCallout = () => {
+    const router = useRouter()
+
   return (
     <section className="flex justify-center items-center overflow-hidden py-0 md:py-12">
         <div className="bg-contact-callout bg-cover w-full h-[530px] md:w-[834px] md:h-[434px] lg:w-[69vw] xl:w-screen-2xl flex flex-col items-center justify-center gap-8 md:gap-6 text-center md:rounded-2xl">
@@ -20,8 +23,8 @@ const ContactCallout = () => {
                 </Text>
             </div>
             <div className="w-[256px] h-[110px] md:w-[351px] md:h-[47px] flex flex-col md:flex-row gap-4 md:gap-6">
-                <Button onClick={() => console.log("top clicked")} variant="blueText">Get in touch</Button>
-                <Button onClick={() => console.log("bottom clicked")} variant="transparentWhite">Place an order</Button>
+                <Button onClick={() => router.push('/contact')} variant="blueText">Get in touch</Button>
+                <Button onClick={() => router.push('/order')} variant="transparentWhite">Place an order</Button>
             </div>
         </div>
     </section>
