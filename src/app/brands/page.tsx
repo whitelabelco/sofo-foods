@@ -1,11 +1,14 @@
+import ContactCallout from "../components/ContactCallout";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import ProductsCallout from "../components/ProductsCallout";
 
 export default function Brands() {
     return (
       <div>
       <Header />
-        <div className="flex items-center justify-center text-3xl py-20 h-screen">Brands Page</div>
+        <ProductsCallout />
+        <ContactCallout />
       <Footer />
     </div>
     );

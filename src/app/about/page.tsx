@@ -4,11 +4,14 @@ import React from "react";
 import { useRouter } from 'next/navigation'
 import Image from "next/image";
 
+import CareersCallout from "../components/CareersCallout";
+import ContactCallout from "../components/ContactCallout";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Text from "../components/Text";
 import Button from "../components/Button";
 import Tag from "../components/Tag";
+
 
 export default function About() {
   const router = useRouter()
@@ -106,6 +109,8 @@ export default function About() {
         {aboutSofoHeroImage}
         {aboutTagSection}
         {historyTagSection}
+      <ContactCallout />
+      <CareersCallout />
       <Footer />
     </div>
     );

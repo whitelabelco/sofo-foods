@@ -32,11 +32,9 @@ export default function Home() {
       },
   ];
 
-console.log("loading testimonials")
-
   const hero = (
     <section className="relative flex justify-center items-center h-[200px] md:h-[435px] overflow-hidden">
-      <div className="flex flex-col relative z-20 my-auto gap-8 -mr-14 md:mr-[10rem] lg:mr-[20rem] xl:mr-[35rem]">
+      <div className="flex flex-col relative z-20 my-auto gap-8 -mr-14 sm:mr-32 md:mr-[4rem] lg:mr-[20rem] xl:mr-[35rem]">
           <span className="inline-flex w-[400px] md:w-[673px]">
             <Text variant="headlineXxl" className="text-white">Quality Ingredients, Dependable Service</Text>
           </span>
@@ -111,7 +109,7 @@ console.log("loading testimonials")
               </div>
           ))}
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 my-16">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-12 my-16">
           <Text variant="paragraphL" className="text-darkest/70"> Check out our full product listing</Text>
           <Button onClick={() => router.push('/products')} variant="transparentBlack">all products</Button>
       </div>
