@@ -113,7 +113,7 @@ export default function Home() {
           <Text variant="paragraphL" className="text-darkest/70"> Check out our full product listing</Text>
           <Button onClick={() => router.push('/products')} variant="transparentBlack">all products</Button>
       </div>
-  </div>
+    </div>
   )
 
   return (
