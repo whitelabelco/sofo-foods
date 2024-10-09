@@ -41,7 +41,7 @@ const BrandsCallout = () => {
             </div>
 
             <div className="flex flex-row w-full max-w-screen-2xl">
-                <div className="grid grid-cols-7 gap-44 md:gap-24">
+                <div className="grid grid-cols-7 gap-44 md:gap-40 lg:gap-24">
                     {featuredBrands.map((brand, index) => (
                         <div key={index} className="flex justify-center items-center">
                             <Image className="max-w-none" src={brand} alt="Brand" width={172} height={172} />
