@@ -1,23 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Text from './Text';
 
-const Testimonial = () => {
+interface TestimonialProps {
+    testimonials: { quote: string; title: string }[];
+  }
+
+  const Testimonial: React.FC<TestimonialProps> = ({ testimonials }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+          setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+        }, 8000);
+      
+        return () => clearInterval(interval);
+      }, []);
 
     return (
         <div className="flex flex-col items-center justify-center">
             <div className="flex flex-row justify-center items-center w-[390px] h-[520px] md:h-[834px] md:w-[510px] lg:w-[1440px] lg:h-[451px]">
                 <div className="flex flex-col items-center gap-8 w-[342px] md:w-[786px] lg:w-[1280px] text-center">
-                        <Text variant="headline" className="uppercase">
-                            - Kind words from our customers -
-                        </Text>
-                        <Text variant="paragraphL" className="text-darkest/70">
-                            &quot;I have been a customer of Sofo Foods for over 60 years, and they have provided me with great service in addition to 
-                            helping my business be a success. I feel like family with Sofo Foods!&quot;
-                        </Text>
-                        <Text variant="headlineSm" className="text-darkest/50">
-                            Frank Incorvaia Sr. Owner | Inky&apos;s Italian Foods
-                        </Text>
+                    <Text variant="headline" className="uppercase">
+                        - Kind words from our customers -
+                    </Text>
+                    <div className="relative w-full max-w-4xl mx-auto overflow-hidden">
+                        <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+                            {testimonials.map((testimonial, index) => (
+                                <div key={index} className="w-full flex-shrink-0 flex flex-col items-center text-center gap-6">
+                                    <Text variant="paragraphL" className="text-darkest/70">
+                                        {testimonial.quote}
+                                    </Text>
+                                    <Text variant="headlineSm" className="text-darkest/50">
+                                        {testimonial.title}
+                                    </Text>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
