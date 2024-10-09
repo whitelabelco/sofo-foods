@@ -3,6 +3,8 @@
 import React from "react";
 import { useRouter } from 'next/navigation'
 
+import CareersCallout from "../components/CareersCallout";
+import ContactCallout from "../components/ContactCallout";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Text from "../components/Text";
@@ -46,6 +48,8 @@ export default function About() {
       <Header />
         {aboutSofo}
         {aboutSofoHeroImage}
+      <ContactCallout />
+      <CareersCallout />
       <Footer />
     </div>
     );

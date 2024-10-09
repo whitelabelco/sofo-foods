@@ -12,7 +12,7 @@ const ProductsCallout = () => {
     return (
         <section className="flex flex-col justify-center items-center overflow-hidden ">
             <div className="bg-products-callout bg-cover bg-top w-full h-[140px] md:h-[282px] lg:h-[650px] z-0"></div>
-            <div className="flex flex-col justify-center items-center gap-8 w-[342px] md:w-[914px] z-10">
+            <div className="flex flex-col justify-center items-center gap-8 w-[342px] sm:w-[450px] md:w-[914px] z-10">
                 <div className="flex flex-col justify-center items-center text-center gap-4">
                 <Text variant="headlineXl">Products</Text>
                 <Text variant="paragraph" className="text-darkest/70">
