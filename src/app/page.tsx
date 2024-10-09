@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Button from "./components/Button";
 import Text from "./components/Text";
+import CustomerServiceCallout from "./components/CustomerServiceCallout";
 import Testimonial from "./components/Testimonial";
 import ProductsCallout from "./components/ProductsCallout";
 import ProductCard from "./components/ProductCard";
@@ -125,6 +126,7 @@ console.log("loading testimonials")
         <ProductsCallout />
           {products}
         <Testimonial testimonials={testimonials} />
+        <CustomerServiceCallout />
         <div className="flex items-center justify-center text-3xl my-32">next section...</div>
       <Footer />
     </div>
