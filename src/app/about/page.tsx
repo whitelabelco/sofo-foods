@@ -12,7 +12,6 @@ import Text from "../components/Text";
 import Button from "../components/Button";
 import Tag from "../components/Tag";
 
-
 export default function About() {
   const router = useRouter()
 
@@ -72,6 +71,12 @@ export default function About() {
     </section>
   )
 
+  const historicalImage = (
+    <section className="flex justify-center items-center bg-tan overflow-hidden py-8">
+      <Image className="max-w-7xl" src="/images/historical.webp" alt="Sofo history" width={1920} height={1080} />
+    </section>
+  )
+
   const historyTagSection = (
     <section className="flex md:flex-row justify-center items-center my-4 md:h-[566px] overflow-hidden">
       <div className="flex flex-col sm:flex-row lg:max-w-screen-2xl gap-8 sm:gap-0 lg:gap-32 border-b border-darkest/10">
@@ -102,13 +107,62 @@ export default function About() {
     </section>
   )
 
+  const team = [
+    {name: "Name", title: "President, CEO"},
+    {name: "Name", title: "President, CEO"},
+    {name: "Name", title: "President, CEO"},
+    {name: "Name", title: "President, CEO"},
+    {name: "Name", title: "President, CEO"},
+    {name: "Name", title: "President, CEO"},
+    {name: "Name", title: "President, CEO"},
+    {name: "Name", title: "President, CEO"}
+  ]
+
+  const teamParagraph = "Approaches generation derive line in additional focusing empowerment. Up generated runway domination devops start grow deep collaborative from strategies provide from."
+
+  const teamSection = (
+    <>
+      <section className="flex justify-center items-center h-[250px] overflow-hidden my-8">
+        <div className="flex flex-col w-[342px] md:w-[764px] justify-center items-center gap-8">
+          <div className="flex flex-col justify-center items-center text-center gap-8">
+            <Text variant="headlineXl">Our Team</Text>
+            <span className="md:hidden flex flex-col gap-8">
+              <Text variant="paragraph" className="text-darkest/70">{teamParagraph}</Text>
+            </span>
+            <span className="hidden md:flex flex-col gap-8">
+              <Text variant="paragraphL" className="text-darkest/70">{teamParagraph}</Text>
+            </span>
+          </div>
+        </div>
+      </section>
+      
+      <div className="flex flex-col items-center justify-center my-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-4 max-w-screen-xl">
+            {team.map((member, index) => (
+                <div key={index} className="grid grid-cols-1 justify-center items-center">
+                  <div className="mx-2">
+                    <Image className="w-[200px] sm:w-[250px] lg:w-full rounded-lg md:rounded-2xl" src="/images/team-placeholder.png" alt="Team member" width={800} height={800} />
+                  </div>
+                  <div className="flex flex-col justify-center items-center">
+                  <Text variant="mainNav">{member.name}</Text>
+                  <Text variant="paragraph" className="!font-roboto-condensed !text-blue !text-base">{member.title}</Text>
+                  </div>
+                </div>
+            ))}
+        </div>
+      </div>
+    </>
+  )
+
     return (
       <div>
       <Header />
         {aboutSofo}
         {aboutSofoHeroImage}
         {aboutTagSection}
+        {historicalImage}
         {historyTagSection}
+        {teamSection}
       <ContactCallout />
       <CareersCallout />
       <Footer />
