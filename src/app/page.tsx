@@ -12,6 +12,7 @@ import CustomerServiceCallout from "./components/CustomerServiceCallout";
 import Testimonial from "./components/Testimonial";
 import ProductsCallout from "./components/ProductsCallout";
 import ProductCard from "./components/ProductCard";
+import ContactCallout from "./components/ContactCallout";
 
 export default function Home() {
   const router = useRouter()
@@ -127,7 +128,7 @@ console.log("loading testimonials")
           {products}
         <Testimonial testimonials={testimonials} />
         <CustomerServiceCallout />
-        <div className="flex items-center justify-center text-3xl my-32">next section...</div>
+        <ContactCallout />
       <Footer />
     </div>
   );
