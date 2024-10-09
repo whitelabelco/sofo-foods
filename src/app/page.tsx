@@ -8,12 +8,31 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Button from "./components/Button";
 import Text from "./components/Text";
+import CustomerServiceCallout from "./components/CustomerServiceCallout";
+import Testimonial from "./components/Testimonial";
 import ProductsCallout from "./components/ProductsCallout";
 import ProductCard from "./components/ProductCard";
 import ContactCallout from "./components/ContactCallout";
 
 export default function Home() {
   const router = useRouter()
+
+  const testimonials = [
+    {
+      quote: `"I have been a customer of Sofo Foods for over 60 years, and they have provided me with great service in addition to helping my business be a success. I feel like family with Sofo Foods!"`,
+      title: "Frank Incorvaia Sr. Owner | Inky's Italian Foods"
+    },
+    {
+        quote: `"We have been a customer of Sofo Foods for many years. The pride and dedication that Sofo Foods has for my business truly shines through its sales representatives."`,
+        title: "Kim Morrison Moran, Owner | Sal's Italian Restaurant"
+      },
+      {
+        quote: `"Mancino's Pizza & Grinders "Sofo Foods has been our main food supplier since we opened in 1997 and we feel our success is significantly influenced by our service and product from them."`,
+        title: "Wayne and Sandy Braun, Owners | Mancino's Pizza and Grinders of Alma, Michigan"
+      },
+  ];
+
+console.log("loading testimonials")
 
   const hero = (
     <section className="relative flex justify-center items-center h-[200px] md:h-[435px] overflow-hidden">
@@ -104,9 +123,11 @@ export default function Home() {
       <Header />
         {hero}
         {welcome}
-          <BrandsCallout />
-          <ProductsCallout />
+        <BrandsCallout />
+        <ProductsCallout />
           {products}
+        <Testimonial testimonials={testimonials} />
+        <CustomerServiceCallout />
         <ContactCallout />
       <Footer />
     </div>
