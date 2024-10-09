@@ -17,13 +17,13 @@ const CustomerServiceCallout = () => {
 
             <div className="grid grid-rows-2 grid-cols-2 mx-8 md:mx-2 md:gap-x-4 gap-y-2">
                 <div className="flex justify-center items-center row-span-1 lg:mb-2">
-                    <Image className="max-w-none rounded-lg object-cover w-[140px] md:w-[240px]" src="/images/cs-1.png" alt="Pizza" width={172} height={172} />
+                    <Image className="max-w-none rounded-lg object-cover w-[140px] md:w-[240px]" src="/images/cs-1.png" alt="Pizza" width={800} height={800} />
                 </div>
                 <div className="flex justify-center items-center row-span-2 lg:mb-1">
-                    <Image className="max-w-none rounded-lg h-full object-cover w-[140px] sm:w-[180px] lg:w-[200px] h-[200px] sm:h-[220px] md:h-[280px] lg:h-[350px]" src="/images/cs-3.png" alt="Pizza" width={200} height={350} />
+                    <Image className="max-w-none rounded-lg h-full object-cover w-[140px] md:w-[160px] lg:w-[200px] h-[200px] md:h-[280px] lg:h-[350px]" src="/images/cs-3.png" alt="Pizza" width={800} height={800} />
                 </div>
                 <div className="flex justify-center items-center row-span-2">
-                    <Image className="max-w-none rounded-lg object-cover w-[140px] md:w-[240px]" src="/images/cs-2.png" alt="Tomato" width={172} height={172} />
+                    <Image className="max-w-none rounded-lg object-cover w-[140px] md:w-[240px]" src="/images/cs-2.png" alt="Tomato" width={800} height={800} />
                 </div>
             </div>
 
