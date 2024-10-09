@@ -44,13 +44,13 @@ export default function About() {
 
   const aboutTagSection = (
     <section className="flex md:flex-row justify-center items-center my-4 md:h-[566px] overflow-hidden">
-      <div className="flex flex-col sm:flex-row lg:max-w-screen-xl gap-8 sm:gap-0 lg:gap-32">
+      <div className="flex flex-col sm:flex-row lg:max-w-screen-2xl gap-8 sm:gap-0 lg:gap-32 border-b border-darkest/10">
 
-          <div className="flex mx-2 items-center justify-center">
+          <div className="flex mx-2 items-center justify-center mb-12">
             <Image className="max-w-none rounded-lg object-cover w-[350px] sm:w-[373px] lg:w-[500px]" src="/images/group-about.webp" alt="Pizza" width={800} height={800} />
           </div>
 
-          <div className="flex flex-col gap-8 mx-8 md:mx-2 items-center justify-center">
+          <div className="flex flex-col gap-8 mx-8 md:mx-2 items-center justify-center my-12">
             <div className="flex flex-col gap-4 md:gap-8">
                 <div className="flex flex-row justify-start">
                     <Tag>About Sofo</Tag>
@@ -69,12 +69,43 @@ export default function About() {
     </section>
   )
 
+  const historyTagSection = (
+    <section className="flex md:flex-row justify-center items-center my-4 md:h-[566px] overflow-hidden">
+      <div className="flex flex-col sm:flex-row lg:max-w-screen-2xl gap-8 sm:gap-0 lg:gap-32 border-b border-darkest/10">
+
+          <div className="flex flex-col gap-8 mx-8 md:mx-2 items-center justify-center my-12">
+            <div className="flex flex-col gap-4 md:gap-8">
+                <div className="flex flex-row justify-start">
+                    <Tag>History</Tag>
+                </div>
+                <Text variant="headlineXl">Sofo History Headline</Text>
+                <span className="flex flex-col gap-8">
+                <Text variant="paragraph" className="text-darkest/70">
+                  In the late 1920’s, Antonio Sofo made the journey from Italy to New York City aboard the Dante Alighieri. 
+                  At just 14 years old, he worked as a furnace attendant shoveling coal for the E.W. Bliss Company, a machine manufacturer based in Brooklyn, New York. 
+                  Eventually work was contracted out across the country and Antonio was moved to Toledo, Ohio.
+                </Text>
+                </span>
+                <span className="inline-flex">
+                  <Button onClick={() => router.push('/history')} variant="transparentBlack">Our history</Button>
+                </span>
+            </div>
+          </div>
+
+          <div className="flex mx-2 items-center justify-center mb-12">
+            <Image className="max-w-none rounded-lg object-cover w-[350px] sm:w-[373px] lg:w-[500px]" src="/images/group-history.webp" alt="Pizza" width={800} height={800} />
+          </div>
+      </div>
+    </section>
+  )
+
     return (
       <div>
       <Header />
         {aboutSofo}
         {aboutSofoHeroImage}
         {aboutTagSection}
+        {historyTagSection}
       <Footer />
     </div>
     );
