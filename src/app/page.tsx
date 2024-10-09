@@ -32,8 +32,6 @@ export default function Home() {
       },
   ];
 
-console.log("loading testimonials")
-
   const hero = (
     <section className="relative flex justify-center items-center h-[200px] md:h-[435px] overflow-hidden">
       <div className="flex flex-col relative z-20 my-auto gap-8 -mr-14 md:mr-[10rem] lg:mr-[20rem] xl:mr-[35rem]">
