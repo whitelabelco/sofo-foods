@@ -1,11 +1,15 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
 
 export default function Order() {
+    const heroTitle = "Sign Up for Online Ordering"
+    const heroParagraph = "Brief instructions about ordering."
+
     return (
       <div>
       <Header />
-        <div className="flex items-center justify-center text-3xl py-20 h-screen">Order Page</div>
+      <Hero variant="base" title={heroTitle} paragraph={heroParagraph} />
       <Footer />
     </div>
     );

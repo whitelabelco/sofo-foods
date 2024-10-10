@@ -13,9 +13,13 @@ import Testimonial from "./components/Testimonial";
 import ProductsCallout from "./components/ProductsCallout";
 import ProductCard from "./components/ProductCard";
 import ContactCallout from "./components/ContactCallout";
+import Hero from "./components/Hero";
 
 export default function Home() {
   const router = useRouter()
+
+  const productsTitle = "Products";
+  const productsParagraph = "Our pride and dedication to quality Italian foods led us to create our own family of brands which we have been developing over the decades. Each of our family brands represents a commitment to quality, flavor and consistency."
 
   const testimonials = [
     {
@@ -32,35 +36,7 @@ export default function Home() {
       },
   ];
 
-  const hero = (
-    <section className="relative flex justify-center items-center h-[200px] md:h-[435px] overflow-hidden">
-      <div className="flex flex-col relative z-20 my-auto gap-8 -mr-14 sm:mr-32 md:mr-[4rem] lg:mr-[20rem] xl:mr-[35rem]">
-          <span className="inline-flex w-[400px] md:w-[673px]">
-            <Text variant="headlineXxl" className="text-white">Quality Ingredients, Dependable Service</Text>
-          </span>
-          <div className="flex flex-row gap-4">
-            <span className="inline-flex">
-                <Button onClick={() => router.push('/contact')} variant="redText">Get in touch</Button>
-            </span>
-            <span className="hidden lg:inline-flex">
-                <Button onClick={() => router.push('/products')} variant="redText">Our products</Button>
-            </span>
-          </div>
-        </div>              
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute z-10 w-screen"
-        >
-          <source
-            src="/videos/hero.mp4"
-            type="video/mp4"
-          />
-          Video not supported by browser.
-        </video>
-    </section>
-  );
+  const heroTitle = "Quality Ingredients, Dependable Service";
 
   const welcomeParagraph = `With over 75 years of experience, Sofo Foods is one of the Midwest's largest family-owned foodservice distributor. 
               Our deep roots in Italian cuisine have expanded over the decades, allowing us to supply a diverse range of top-quality food products to restaurants of all kinds. 
@@ -101,7 +77,7 @@ export default function Home() {
   ]
 
   const products = (
-    <div className="flex flex-col items-center justify-center my-8">
+    <div className="flex flex-col items-center justify-center my-8 md:my-20">
       <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 md:gap-4 max-w-screen-xl">
           {productsNames.map((name, index) => (
               <div key={index} className="flex justify-center items-center">
@@ -119,10 +95,19 @@ export default function Home() {
   return (
     <div>
       <Header />
-        {hero}
+      <Hero
+        variant="double"
+        title={heroTitle}
+        firstButtonText="Online order signup"
+        firstButtonVariant="redText"
+        firstButtonRoute="/contact"
+        secondButtonText="Our products"
+        secondButtonVariant="redText"
+        secondButtonRoute="/products"
+      />
         {welcome}
         <BrandsCallout />
-        <ProductsCallout />
+        <ProductsCallout variant="single" title={productsTitle} paragraph={productsParagraph} firstButtonText="All products" firstButtonVariant="red" firstButtonRoute="/products" />
           {products}
         <Testimonial testimonials={testimonials} />
         <CustomerServiceCallout />
