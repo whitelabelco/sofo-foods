@@ -75,7 +75,9 @@ const Hero: React.FC<HeroProps> = ({ variant = 'base', firstButtonRoute = "/", s
                         </span>
                         <div className="flex flex-row gap-4">
                             {firstButton}
+                        <span className="hidden lg:inline-flex">
                             {secondButton}
+                        </span>
                         </div>
                         </div>              
                         <video
