@@ -1,11 +1,15 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
 
 export default function Careers() {
+    const heroTitle = "Careers"
+    const heroParagraph = "Something about working with us."
+
     return (
       <div>
       <Header />
-        <div className="flex items-center justify-center text-3xl py-20 h-screen">Careers Page</div>
+      <Hero variant="base" title={heroTitle} paragraph={heroParagraph} />
       <Footer />
     </div>
     );
