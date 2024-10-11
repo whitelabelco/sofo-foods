@@ -15,7 +15,7 @@ interface TestimonialProps {
         }, 8000);
       
         return () => clearInterval(interval);
-      }, []);
+      });
 
     return (
         <div className="flex flex-col items-center justify-center">
