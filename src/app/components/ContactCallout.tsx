@@ -10,7 +10,7 @@ const ContactCallout = () => {
     const router = useRouter()
 
   return (
-    <section className="flex justify-center items-center overflow-hidden py-0 md:py-12">
+    <section className="flex justify-center items-center overflow-hidden md:my-40">
         <div className="bg-contact-callout bg-cover w-full h-[530px] md:w-[834px] md:h-[434px] lg:w-[69vw] xl:w-screen-2xl flex flex-col items-center justify-center gap-8 md:gap-6 text-center md:rounded-2xl">
             <div className="w-[256px] md:w-[774px] md:h-[171px] lg:w-[732px] flex flex-col gap-4">
                 <Text variant="headlineXl" className="text-white">

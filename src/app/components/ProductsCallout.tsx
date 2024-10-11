@@ -43,7 +43,7 @@ const ProductsCallout: React.FC<ProductsCalloutProps> = ({ variant = "single", f
     return (
         <>
         { variant === 'single' && (
-            <section className="flex flex-col justify-center items-center overflow-hidden">
+            <section className="flex flex-col justify-center items-center overflow-hidden my-20">
                 <div className="bg-products-callout bg-cover bg-top w-full h-[140px] md:h-[282px] lg:h-[520px] xl:h-[700px] z-0"></div>
                 <div className="flex flex-col justify-center items-center gap-8 w-[342px] sm:w-[450px] md:w-[914px] z-10">
                     {common}

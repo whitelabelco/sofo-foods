@@ -49,7 +49,7 @@ const Hero: React.FC<HeroProps> = ({ variant = 'base', firstButtonRoute = "/", s
     return (
         <>
             { variant === 'base' && (
-                <section className="flex flex-col justify-center items-center h-[564px] md:h-[400px] mt-4 md:mt-0 overflow-hidden">
+                <section className="flex flex-col justify-center items-center h-[350px] md:h-[400px] mt-4 md:mt-0 overflow-hidden">
                     <div className="flex flex-col w-[342px] md:w-[674px] justify-center items-center gap-8">
                         {common}
                     </div>
@@ -57,7 +57,7 @@ const Hero: React.FC<HeroProps> = ({ variant = 'base', firstButtonRoute = "/", s
             )}
 
             { variant === 'single' && (
-                <section className="flex flex-col justify-center items-center h-[564px] md:h-[500px] mt-4 md:mt-0 overflow-hidden">
+                <section className="flex flex-col justify-center items-center h-[350px] md:h-[500px] mt-4 md:mt-0 overflow-hidden">
                     <div className="flex flex-col w-[342px] md:w-[674px] justify-center items-center gap-8">
                         {common}
                         <div className="flex flex-col md:flex-row justify-center items-center gap-6">
