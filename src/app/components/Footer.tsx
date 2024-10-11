@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import Link from './FooterLink';
 import Text from './Text';
-import FormField from './FormField';
+import FormField from './InputForm';
 
 const Footer = () => {
     const [value, setValue] = useState("");
