@@ -44,7 +44,7 @@ const variantContent = {
 
 const LocationCard: React.FC<LocationCardProps> = ({ variant = 'ohio' }) => {
   return (
-    <div className="flex flex-row md:flex-col justify-end p-4 md:p-8 gap-6 md:gap-10 w-[322.88px] h-[187px] md:w-[282.88px] md:h-[291px] bg-location-bg/60 rounded-lg relative text-darkest">      
+    <div className="flex flex-row md:flex-col justify-end p-4 md:p-8 gap-6 md:gap-10 w-[322.88px] h-[187px] md:w-[220px] md:h-[291px] lg:w-[412px] lg:h-[290px] bg-location-bg/60 rounded-lg relative text-darkest">      
       {/* Container */}
       <div className="flex flex-col items-start p-2 gap-4 w-[218.88px] h-[155px]">
         {/* State Icon */}
