@@ -54,9 +54,7 @@ export default function Contact() {
           {contactFormSection}
           {headquartersGrid}
         <DistributionCallout />
-        <div className="md:py-32">
-          <ContactCallout />
-        </div>
+        <ContactCallout />
         <CareersCallout />
         <Footer />
       </div>
