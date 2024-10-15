@@ -11,7 +11,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import LocationCard from "../components/LocationCard";
 import Text from "../components/Text";
-import Form from "../components/Form";
+import Form from "../components/ContactForm";
 
 export default function Contact() {
 
