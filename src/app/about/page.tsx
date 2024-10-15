@@ -20,7 +20,7 @@ export default function About() {
   const heroParagraph = "Going strategies identify in framework evolved keeping day offline. Mentality indicators your robust agile inside devops."
 
   const aboutSofoHeroImage = (
-    <section className="flex justify-center items-center overflow-hidden my-4">
+    <section className="flex justify-center items-center overflow-hidden mb-20">
       <Image className="lg:max-w-screen" src="/images/corporate-office.webp" alt="Corporate office" width={1920} height={1080} />
     </section>
   )
@@ -54,7 +54,7 @@ export default function About() {
 
   const historicalImage = (
     <section className="flex justify-center items-center bg-tan overflow-hidden py-8">
-      <Image className="max-w-7xl" src="/images/historical.webp" alt="Sofo history" width={1920} height={1080} />
+      <Image className="w-screen lg:w-5/6" src="/images/historical.webp" alt="Sofo history" width={1920} height={1080} />
     </section>
   )
 
