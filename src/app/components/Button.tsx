@@ -10,7 +10,7 @@ interface ButtonProps {
     type?: 'submit';
   }
 
-  const Button: React.FC<ButtonProps> = ({ variant = 'red', children, onClick, className }) => {
+  const Button: React.FC<ButtonProps> = ({ variant = 'red', children, onClick, className, type }) => {
     const baseStyles = 'group relative flex items-center justify-center whitespace-nowrap gap-2 rounded-lg font-roboto-condensed text-xs md:text-base font-base uppercase overflow-hidden px-6 py-2 md:px-8 md:py-3.5';
     const variantStyles = {
       red: 'bg-red text-white',
