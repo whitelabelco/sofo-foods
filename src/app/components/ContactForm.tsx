@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Button from './Button';
 
 
-const Form = () => {
+const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -73,4 +73,4 @@ const Form = () => {
   )
 };
 
-export default Form;
+export default ContactForm;
