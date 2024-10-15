@@ -7,6 +7,7 @@ interface ButtonProps {
     children: React.ReactNode;
     onClick?: () => void;
     className?: string;
+    type?: 'submit';
   }
 
   const Button: React.FC<ButtonProps> = ({ variant = 'red', children, onClick, className }) => {
@@ -43,6 +44,7 @@ interface ButtonProps {
       <button
         className={`${className} ${baseStyles} ${variantStyles[variant]}`}
         onClick={onClick}
+        type={type}
       >
         <span className="flex flex-row relative left-2 items-center justify-center z-10 group-hover:-translate-x-4 transition-transform duration-300 ease-in-out">
           {children}

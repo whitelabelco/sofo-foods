@@ -2,7 +2,7 @@ import React from 'react';
 import Input from './Input';
 import Button from './Button';
 
-interface FormFieldProps {
+interface InputFormProps {
   placeholder: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value: string;
@@ -14,7 +14,7 @@ interface FormFieldProps {
   inputVariant?: "base" | "dark";
 }
 
-const FormField: React.FC<FormFieldProps> = ({ placeholder, onChange, value, disabled, required, buttonText, onClick, buttonVariant, inputVariant }) => {
+const InputForm: React.FC<InputFormProps> = ({ placeholder, onChange, value, disabled, required, buttonText, onClick, buttonVariant, inputVariant }) => {
   return (
     <div className="flex flex-row sm:flex-col lg:flex-row justify-center lg:items-center gap-3">
         <Input placeholder={placeholder} onChange={onChange} value={value} disabled={disabled} required={required} variant={inputVariant} />
@@ -23,4 +23,4 @@ const FormField: React.FC<FormFieldProps> = ({ placeholder, onChange, value, dis
   );
 };
 
-export default FormField;
+export default InputForm;
