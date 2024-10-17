@@ -15,8 +15,7 @@ interface BrandsCalloutProps {
 const BrandsCallout: React.FC<BrandsCalloutProps> = ({ backgroundImage = false }) => {
     const router = useRouter()
 
-    const brandsParagraph = `Our pride and dedication to quality Italian foods led us to create our own family of brands which we have been developing over the decades. 
-    Each of our family brands represents a commitment to quality, flavor and consistency.`
+    const brandsParagraph = `Our passion for quality Italian foods inspired us to create our own family of brands, carefully developed over the years with restaurant owners in mind. Each of our brands reflects our dedication to delivering the best in flavor, quality, and consistency that you can rely on.`
 
     const featuredBrands = [
         "/house-brands/antonio.webp",

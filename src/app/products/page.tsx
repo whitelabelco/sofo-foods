@@ -6,12 +6,12 @@ import BrandsCallout from "../components/BrandsCallout";
 import ContactCallout from "../components/ContactCallout";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import ProductCard from "../components/ProductCard";
 import ProductsCallout from "../components/ProductsCallout";
 import Text from "../components/Text";
 import Link from "../components/Link";
 import DownSvg from '/public/icons/down.svg';
 import UpSvg from '/public/icons/up.svg';
+import ProductsGrid from "../components/ProductsGrid";
 
 
 export default function Products() {
@@ -85,13 +85,7 @@ export default function Products() {
           ))}
         </div>
         <div className="flex flex-col items-center justify-center my-8 md:my-20 md:w-2/3 sm:mx-2">
-          <div className="grid grid-cols-2 xl:grid-cols-3 gap-2 md:gap-4 max-w-screen-xl">
-              {products.map((product, index) => (
-                  <div key={index} className="flex justify-center items-center">
-                      <ProductCard className="w-[180px] md:w-[300px]" name={product.name} route={product.route}/>
-                  </div>
-              ))}
-          </div>
+          <ProductsGrid full />
         </div>
       </section>
     )
