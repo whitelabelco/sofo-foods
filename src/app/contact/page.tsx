@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Text from "../components/Text";
-import Form from "../components/Form";
+import Form from "../components/ContactForm";
 import HeadquartersGrid from '../components/HeadquartersGrid';
 
 export default function Contact() {
@@ -20,7 +20,7 @@ export default function Contact() {
 
     const contactFormSection = (
       <section className="flex flex-col md:flex-row items-center justify-center py-32 md:py-40">
-        <div className="flex flex-col gap-12 md:gap-0 md:flex-row md:justify-between w-screen lg:w-1/2">
+        <div className="flex flex-col gap-12 md:gap-0 md:flex-row md:justify-between w-screen xl:w-1/2">
           <div className="flex md:hidden">
             <Image className="w-screen" src="/images/contact.webp" alt="Contact Portrait" width={1200} height={1200} />
           </div>
@@ -44,9 +44,7 @@ export default function Contact() {
           {contactFormSection}
         <HeadquartersGrid />
         <DistributionCallout />
-        <div className="md:py-32">
-          <ContactCallout />
-        </div>
+        <ContactCallout />
         <CareersCallout />
         <Footer />
       </div>

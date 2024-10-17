@@ -4,12 +4,13 @@ import React, { useState } from 'react';
 import Button from './Button';
 
 
-const Form = () => {
+const SignUpForm = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         tel: "",
-        message: "",
+        store: "",
+        customer: "",
       });
     const [status, setStatus] = useState("");
 
@@ -50,27 +51,31 @@ const Form = () => {
     const commonStyles ="shadow-sm border border-darkest/10 text-darkest/70 text-sm rounded-lg block w-full p-2.5 focus:outline-none";
 
   return (
-    <form className="max-w-1/2 w-full mx-auto font-roboto-condensed" onSubmit={handleSubmit}>
-        <div className="mb-5">
-            <label htmlFor="name" className="block mb-2 text-sm font-medium text-darkest">Name</label>
+    <form className="w-full mx-auto font-roboto-condensed" onSubmit={handleSubmit}>
+        <div className="mb-8">
+            <label htmlFor="name" className="block mb-2 text-sm font-medium text-darkest">*Your Full Name</label>
             <input type="name" id="name" className={commonStyles} value={formData.name} onChange={handleChange} required />
         </div>
-        <div className="mb-5">
-            <label htmlFor="email" className="block mb-2 text-sm font-medium text-darkest">Email</label>
+        <div className="mb-8">
+            <label htmlFor="email" className="block mb-2 text-sm font-medium text-darkest">*Email Address</label>
             <input type="email" id="email" className={commonStyles} value={formData.email} onChange={handleChange} required />
         </div>
-        <div className="mb-5">
-            <label htmlFor="tel" className="block mb-2 text-sm font-medium text-darkest">Phone Number</label>
+        <div className="mb-8">
+            <label htmlFor="tel" className="block mb-2 text-sm font-medium text-darkest">*Phone Number</label>
             <input type="tel" id="tel" className={commonStyles} value={formData.tel} onChange={handleChange} required />
         </div>
-        <div className="mb-5">
-            <label htmlFor="message" className="block mb-2 text-sm font-medium text-darkest">Message</label>
-            <textarea id="message" className={`${commonStyles} p-8`} value={formData.message} onChange={handleChange} required />
+        <div className="mb-8">
+            <label htmlFor="store" className="block mb-2 text-sm font-medium text-darkest">*Store Name</label>
+            <input type="text" id="store" className={commonStyles} value={formData.store} onChange={handleChange} required />
         </div>
-        <Button type="submit" variant="blue" onClick={() => {}}>Send Message</Button>
+        <div className="mb-8">
+            <label htmlFor="customer" className="block mb-2 text-sm font-medium text-darkest">*Sofo Customer Number</label>
+            <input type="text" id="customer" className={commonStyles} value={formData.customer} onChange={handleChange} required />
+        </div>
+        <Button type="submit" variant="blue" onClick={() => {}}>Submit</Button>
     </form>
 
   )
 };
 
-export default Form;
+export default SignUpForm;
