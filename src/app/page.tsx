@@ -11,9 +11,9 @@ import Text from "./components/Text";
 import CustomerServiceCallout from "./components/CustomerServiceCallout";
 import Testimonial from "./components/Testimonial";
 import ProductsCallout from "./components/ProductsCallout";
-import ProductCard from "./components/ProductCard";
 import ContactCallout from "./components/ContactCallout";
 import Hero from "./components/Hero";
+import ProductsGrid from "./components/ProductsGrid";
 
 export default function Home() {
   const router = useRouter()
@@ -67,24 +67,9 @@ export default function Home() {
     </section>
   )
 
-  const productsNames = [
-      "bread",
-      "cheese",
-      "meat",
-      "dairy",
-      "produce",
-      "deli"
-  ]
-
   const products = (
     <div className="flex flex-col items-center justify-center my-8 md:my-20">
-      <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 md:gap-4 max-w-screen-xl">
-          {productsNames.map((name, index) => (
-              <div key={index} className="flex justify-center items-center">
-                  <ProductCard name={name}/>
-              </div>
-          ))}
-      </div>
+      <ProductsGrid />
       <div className="flex flex-col sm:flex-row items-center justify-center gap-12 my-16">
           <Text variant="paragraphL" className="text-darkest/70"> Check out our full product listing</Text>
           <Button onClick={() => router.push('/products')} variant="transparentBlack">all products</Button>
