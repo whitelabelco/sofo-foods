@@ -33,7 +33,6 @@ const config: Config = {
       backgroundImage: {
         'contact-callout': "url('/images/contact-callout.jpeg')",
         'careers-callout': "url('/images/careers-callout.webp')",
-        'product-placeholder': "url('/images/product-placeholder.jpeg')",
         'products-callout': "linear-gradient(rgba(0, 0, 0, 0) 90%, rgba(255, 255, 255, 255)), url('/images/products-callout.jpg')",
         'careers': "linear-gradient(rgba(0, 0, 0, 0) 30%, rgba(25, 25, 23, 1)",
         'brands-hero': "url('/images/brands-hero.webp')",
