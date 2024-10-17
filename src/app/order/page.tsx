@@ -11,7 +11,7 @@ export default function Order() {
 
     const signUpSection = (
       <section className="flex flex-col md:flex-row justify-center items-center overflow-hidden mt-12 mb-32">
-        <div className="flex flex-col gap-20 md:gap-0 md:flex-row items-center w-4/5 lg:w-1/2">
+        <div className="flex flex-col gap-20 md:gap-0 md:flex-row items-center w-4/5 xl:w-1/2">
           <div className="flex flex-col items-center w-full md:w-2/5">
             <div className="border-b border-2 border-darkest/10 w-full mb-8 pb-4">
               <Text variant="mainNav" className="text-darkest uppercase">Sign Up</Text>
