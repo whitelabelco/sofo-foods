@@ -52,9 +52,19 @@ export default function About() {
     </section>
   )
 
-  const historicalImage = (
+  const historicalVideo = (
     <section className="flex justify-center items-center bg-tan overflow-hidden py-8">
-      <Image className="w-screen lg:w-5/6" src="/images/historical.webp" alt="Sofo history" width={1920} height={1080} />
+      <iframe
+        className="h-[194px] sm:h-[380px] md:h-[620px] lg:h-[840px]"
+        width="1280"
+        height="841"
+        src="https://www.youtube.com/embed/n_XeCn3B630?si=u5smnZr0FM8O5VsU"
+        title="Sofo History Video"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen>
+      </iframe>
     </section>
   )
 
@@ -67,12 +77,12 @@ export default function About() {
                 <div className="flex flex-row justify-start">
                     <Tag>History</Tag>
                 </div>
-                <Text variant="headlineXl">Sofo History Headline</Text>
+                <Text variant="headlineXl">A Taste of Italy in Toledo: The Rise of Sofo Foods</Text>
                 <span className="flex flex-col gap-8">
                 <Text variant="paragraph" className="text-darkest/70">
-                  In the late 1920’s, Antonio Sofo made the journey from Italy to New York City aboard the Dante Alighieri. 
-                  At just 14 years old, he worked as a furnace attendant shoveling coal for the E.W. Bliss Company, a machine manufacturer based in Brooklyn, New York. 
-                  Eventually work was contracted out across the country and Antonio was moved to Toledo, Ohio.
+                  Antonio Sofo&apos;s journey from Italy to Toledo in the 1920s sparked a family legacy that transformed from 
+                  selling authentic Italian foods to establishing Sofo Foods, a major wholesale distributor and retailer of Italian
+                  products across the Midwest, built on a foundation of quality, innovation, and family tradition.
                 </Text>
                 </span>
                 <span className="inline-flex">
@@ -141,7 +151,7 @@ export default function About() {
       <Hero variant="single" title={heroTitle} paragraph={heroParagraph} firstButtonText="Our products" firstButtonVariant="red" firstButtonRoute="/products" />
         {aboutSofoHeroImage}
         {aboutTagSection}
-        {historicalImage}
+        {historicalVideo}
         {historyTagSection}
         {teamSection}
       <ContactCallout />
