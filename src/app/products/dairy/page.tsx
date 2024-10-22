@@ -3,6 +3,7 @@ import Hero from "@/app/components/Hero";
 import ProductContent from "@/app/components/ProductContent";
 import ContactCallout from "@/app/components/ContactCallout";
 import Footer from "@/app/components/Footer";
+import Header from "@/app/components/Header";
 
 const Dairy = () => {
 
@@ -49,6 +50,7 @@ const Dairy = () => {
 
     return (
         <div>
+            <Header />
             <Hero variant="single" title="Dairy" firstButtonVariant="blackText" firstButtonRoute="/order" firstButtonText="Place an Order" className="bg-[url('/products/dairy.webp')] bg-cover bg-no-repeat bg-center" titleColor="text-white" overlay />
             <section className="flex flex-col md:flex-row justify-center gap-12 xl:gap-28 mx-4">
                 <ProductsSidebar />
