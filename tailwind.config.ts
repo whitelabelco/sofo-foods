@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        'screen-2xl': '104rem',
+      },
       colors: {
         darkest: "#191917",
         green: "#047433",
