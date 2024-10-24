@@ -18,8 +18,8 @@ interface TestimonialProps {
       });
 
     return (
-        <div className="flex flex-col items-center justify-center">
-            <div className="flex flex-row justify-center items-center w-[390px] h-[520px] sm:w-[550px] md:h-[834px] md:w-[510px] lg:w-[1440px] lg:h-[451px]">
+        <div className="flex flex-col items-center justify-center md:pt-8 md:pb-20">
+            <div className="flex flex-row justify-center items-center w-[390px] sm:w-[550px] md:w-[510px] lg:w-[1440px]">
                 <div className="flex flex-col items-center gap-8 w-[342px] sm:w-[500px] md:w-[786px] lg:w-[1280px] text-center">
                     <Text variant="headline" className="uppercase">
                         - Kind words from our customers -

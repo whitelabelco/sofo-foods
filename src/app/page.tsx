@@ -68,7 +68,7 @@ export default function Home() {
   )
 
   const products = (
-    <div className="flex flex-col items-center justify-center my-8 md:my-20">
+    <div className="flex flex-col items-center justify-center">
       <ProductsGrid />
       <div className="flex flex-col sm:flex-row items-center justify-center gap-12 my-16">
           <Text variant="paragraphL" className="text-darkest/70"> Check out our full product listing</Text>
