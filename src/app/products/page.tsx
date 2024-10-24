@@ -40,7 +40,7 @@ export default function Products() {
         secondButtonRoute="/order"
       />
         {productsSection}
-      <BrandsCallout />
+      <span className="hidden lg:flex"><BrandsCallout /></span>
       <ContactCallout />
       <Footer />
     </div>
