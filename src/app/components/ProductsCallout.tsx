@@ -54,7 +54,7 @@ const ProductsCallout: React.FC<ProductsCalloutProps> = ({ variant = "single", f
             </section>
         )}
         { variant === 'double' && (
-            <section className="flex flex-col gap-12 justify-center items-center h-[564px] md:h-[622px] mt-4 md:mt-0 overflow-hidden bg-products-hero bg-cover bg-right">
+            <section className="flex flex-col gap-12 justify-center items-center h-[564px] md:h-[622px] overflow-hidden bg-products-hero bg-cover bg-right">
             <div className="flex flex-col w-[342px] md:w-[674px] justify-center items-center gap-8">
                 {common}
                 <div className="flex flex-col md:flex-row justify-center items-center gap-6">

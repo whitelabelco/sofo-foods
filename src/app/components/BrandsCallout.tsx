@@ -28,7 +28,7 @@ const BrandsCallout: React.FC<BrandsCalloutProps> = ({ backgroundImage = false }
     ]
 
     return (
-        <section className={backgroundImage ? "flex flex-col gap-12 justify-center items-center h-[564px] md:h-[622px] overflow-hidden bg-brands-hero bg-cover bg-right" : "flex flex-col gap-12 justify-center items-center h-[564px] md:h-[622px] my-24 overflow-hidden"}>
+        <section className={backgroundImage ? "flex flex-col gap-12 justify-center items-center h-[564px] md:h-[622px] mt-4 md:mt-0 overflow-hidden bg-brands-hero bg-cover bg-right" : "flex flex-col gap-12 justify-center items-center h-[564px] md:h-[622px] my-12 overflow-x-hidden"}>
             <div className="flex flex-col w-[342px] md:w-[674px] justify-center items-center gap-8">
                 <div className="flex flex-col justify-center items-center text-center gap-4">
                 <Text variant="headlineXl" className={backgroundImage ? "text-white" : ""}>Brands</Text>
@@ -45,10 +45,10 @@ const BrandsCallout: React.FC<BrandsCalloutProps> = ({ backgroundImage = false }
             </div>
             { !backgroundImage && (
                 <div className="flex flex-row w-full max-w-screen-2xl">
-                    <div className="grid grid-cols-7 gap-44 md:gap-40 lg:gap-24">
+                    <div className="grid grid-cols-7 gap-32 sm:gap-48 lg:gap-44">
                         {featuredBrands.map((brand, index) => (
                             <div key={index} className="flex justify-center items-center">
-                                <Image className="max-w-none" src={brand} alt="Brand" width={172} height={172} />
+                                <Image className="max-w-none w-[120px] sm:w-[172px]" src={brand} alt="Brand" width={172} height={172} />
                             </div>
                         ))}
                     </div>

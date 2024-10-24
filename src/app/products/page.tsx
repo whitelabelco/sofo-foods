@@ -15,10 +15,12 @@ export default function Products() {
     const productsParagraph = "Explore our diverse products, from premium dairy and meats to fresh produce and dry goods. Each product is selected for its quality and consistency."
   
     const productsSection = (
-      <section className="flex flex-col md:flex-row justify-center xl:gap-28 mx-4">
-        <ProductsSidebar />
-        <div className="flex flex-col items-center justify-center my-8 md:my-20 md:w-2/3 sm:mx-2">
-          <ProductsGrid full />
+      <section className="flex flex-col md:flex-row justify-center mx-4 md:w-screen">
+        <div className="flex flex-col md:flex-row md:max-w-screen-2xl">
+          <ProductsSidebar />
+          <div className="flex flex-col items-center justify-center my-8 md:my-20 lg:w-full sm:mx-2">
+            <ProductsGrid full />
+          </div>
         </div>
       </section>
     )
