@@ -66,7 +66,7 @@ const ProductsSidebar = () => {
             {dropDown}
             </div>
             <div className="hidden md:flex flex-col mt-12 w-1/4">
-            <div className="border-b border-2 border-darkest/10 w-full my-8 pb-8 ml-2">
+            <div className="border-b border-2 border-darkest/10 my-8 pb-8 mr-8">
                 {commonTitle}
             </div>
             {products.map((product, index) => (

@@ -29,10 +29,10 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({ full = false }) => {
     const displayedProducts = full ? products : products.slice(0, 8);
 
     return (
-      <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 md:gap-4 max-w-screen-xl">
+      <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 md:gap-4 lg:max-w-screen-2xl">
         {displayedProducts.map((product, index) => (
           <div key={index} className="flex justify-center items-center">
-            <ProductCard className={`${product.background} w-[180px] md:w-[300px]`} name={product.name} route={product.route} />
+            <ProductCard className={`${product.background}`} name={product.name} route={product.route} />
           </div>
         ))}
       </div>
