@@ -59,7 +59,7 @@ const ProductsCallout: React.FC<ProductsCalloutProps> = ({ variant = "single", f
                 {common}
                 <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                     {firstButton}
-                    {secondButton}
+                    <span className="hidden md:flex">{secondButton}</span>
                 </div>
             </div>
             </section>

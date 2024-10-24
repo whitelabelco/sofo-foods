@@ -33,8 +33,8 @@ const ProductsSidebar = () => {
       )
 
       const dropDown = (
-        <div className="flex flex-col">
-          <div className="flex flex-row items-center justify-between border-b border-2 border-darkest/10 w-screen my-8 pb-8 px-8">
+        <div className="flex flex-col w-screen">
+          <div className="flex flex-row items-center justify-between border-b border-2 border-darkest/10 w-[98%] my-2 pb-4 px-4">
               {commonTitle}
               { !isOpen ? (
                       <div className="space-y-2" onClick={() => setIsOpen((prev) => !prev)}>

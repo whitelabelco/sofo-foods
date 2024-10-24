@@ -38,7 +38,7 @@ const BrandsCallout: React.FC<BrandsCalloutProps> = ({ backgroundImage = false }
                 <span className="inline-flex">
                     <Button onClick={() => router.push('/brands')} variant={backgroundImage ? "blackText" : "red"}>More about brands</Button>
                 </span>
-                <span className="inline-flex">
+                <span className="hidden md:inline-flex">
                     <Button onClick={() => router.push('/order')} variant={backgroundImage ? "transparentWhite" : "transparentBlack"}>Start your first order</Button>
                 </span>
                 </div>
